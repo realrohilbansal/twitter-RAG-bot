@@ -8,3 +8,5 @@ Steps to use:
 3. Run the  `main.py` file.
 
 ! This is a personal project part of my langchain learning process.
+
+> This project isn't currently deployed because of the huge Twitter API fee.
