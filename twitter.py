@@ -26,7 +26,7 @@ class TwitterBot:
                                         access_token=os.getenv("twitter_access_token"), 
                                         access_token_secret=os.getenv("twitter_access_token_secret"))
     
-        self.airtable = Airtable(os.getenv("Airtable_personal_access_token"))
+        self.airtable = Airtable(os.getenv("Airtable_base_id"), os.getenv("Airtable_personal_access_token"))
 
         # Create a llm instance for our twitter bot
         self.llm = ChatOpenAI(temperature=0.6, openai_api_key=os.getenv("openai_api_key"), model="gpt-4-1106-preview")
