@@ -2,7 +2,7 @@ from langchain_community.document_loaders import TextLoader  # loads text docume
 from langchain.text_splitter import CharacterTextSplitter  # splits text into chunks
 # from langchain_community.embeddings import HuggingFaceInstructEmbeddings as embd   # embeds text into vectors
 from langchain_openai import OpenAIEmbeddings
-import joblib
+# import joblib
 import os
 from langchain_community.vectorstores import FAISS   # vector database
 from langchain.chains import RetrievalQAWithSourcesChain   # question answering chain
