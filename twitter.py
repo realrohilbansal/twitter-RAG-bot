@@ -6,7 +6,7 @@ from langchain_community.vectorstores import FAISS
 from langchain_openai import OpenAIEmbeddings
 from enquiry import query
 
-from langchain_community.chat_models import ChatOpenAI
+from langchain_openai import ChatOpenAI
 from langchain.prompts import SystemMessagePromptTemplate, HumanMessagePromptTemplate, ChatPromptTemplate
 
 #import api keys fromm .env file
@@ -20,7 +20,7 @@ vectordb = FAISS.load_local("faiss_index", embeddings, allow_dangerous_deseriali
 # TwitterBot class
 class TwitterBot: 
     def __init__(self):
-        self.twitter_api = tweepy.Client(bearer_token=os.getenv("twitter_bearer_token"),
+        self.twitter_api = tweepy.Client(bearer_token=os.getenv("twitter_bearer_key"),
                                         consumer_key=os.getenv("twitter_api_key"),
                                         consumer_secret=os.getenv("twitter_api_key_secret"),
                                         access_token=os.getenv("twitter_access_token"), 
